@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "freight_solutions/wsgi.py",
+      "src": "ll_projec/wsgi.py",
       "use": "@vercel/python",
       "config": { 
         "maxLambdaSize": "15mb",
