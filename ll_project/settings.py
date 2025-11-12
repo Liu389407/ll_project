@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'll_project.wsgi.application'
     }
 }'''
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DB_NAME'),
@@ -121,17 +121,17 @@ if 'DATABASE_URL' in os.environ:
         'PASSWORD': db_info.password,
         'HOST': db_info.hostname,
         'PORT': db_info.port,
-    }'''
+    }
 
 # 数据库配置 - 添加回退到 SQLite
-if os.environ.get('VERCEL'):
+'''if os.environ.get('VERCEL'):
     # Vercel 环境：如果没有数据库配置，使用 SQLite（只读）
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
-    }
+    }'''
 else:
     # 本地开发环境
     DATABASES = {
