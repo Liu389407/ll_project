@@ -137,7 +137,7 @@ if 'DATABASE_URL' in os.environ:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
-    }'''
+    }
 else:
     # 本地开发环境
     DATABASES = {
@@ -145,7 +145,7 @@ else:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
-    }
+    }'''
 
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
