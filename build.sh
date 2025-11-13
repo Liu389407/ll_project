@@ -1,10 +1,6 @@
-#!/bin/bash
-
-# 安装依赖
+#/bin/bash
+echo "开始构建..."
 pip install -r requirements.txt
-
-# 收集静态文件
 python manage.py collectstatic --noinput
-
-# 执行数据库迁移
-python manage.py migrate
+echo "构建完成"
+exit 0
